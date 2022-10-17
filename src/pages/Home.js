@@ -8,7 +8,6 @@ const Home = () => {
   const { setNav, error } = useGlobalContext();
   useEffect(() => {
     setNav(false);
-    document.title = 'Spoonacular';
   }, [setNav]);
 
   return (
