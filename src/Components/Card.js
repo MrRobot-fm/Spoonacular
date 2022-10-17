@@ -49,37 +49,25 @@ const SingleCard = ({
       transition: {
         type: 'spring',
         bounce: 0.3,
-        duration: 1,
-        delay: 0.4
+        duration: 0.8,
+        delay: 0.3
       }
     }
   };
 
   return (
     <motion.div
-      // initial={{ y: 300, opacity: 0 }}
-      // animate={{ y: 0, opacity: 1 }}
-      // transition={{ type: 'spring', duration: 1.2, delay: 0.5, bounce: 0.3 }}
       initial={'offscreen'}
       whileInView={'onscreen'}
-      viewport={{ once: true, amount: 0.4 }}
-      // transition={{
-      //   type: 'spring',
-      //   duration: 1,
-      //   delay: 0.5,
-      //   bounce: 0.3
-      // }}
+      viewport={{ once: true, amount: 0.5 }}
     >
       <motion.div variants={cardVariants}>
         <Card
           index={index}
           sx={{
-            maxWidth: 280,
-            maxHeight: 880,
-            boxShadow: 14,
-            borderRadius: '5%',
-            margin: 5
+            borderRadius: '8%'
           }}
+          className="max-w-[280px] max-h-[480px] shadow-lg rounded-[100rem] m-10"
         >
           <CardMedia component="img" alt="food" height="140" image={image} />
           <CardContent className="mb-2">
@@ -122,7 +110,7 @@ const SingleCard = ({
                   ingredienti: step2
                 }}
               >
-                Learn more{' '}
+                Learn more
               </Link>
             </Button>
           </CardActions>
