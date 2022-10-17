@@ -34,7 +34,7 @@ const Home = () => {
               bounce: 0.3
             }}
           >
-            <h1 className="text-5xl font-bold">Spoonacular Projects3</h1>
+            <h1 className="text-5xl font-bold">Spoonacular Projects</h1>
             <h1 className="py-2 text-3xl">
               <span className="text-yellow-300 font-semibold">Vegetarian </span>
               food search engine
