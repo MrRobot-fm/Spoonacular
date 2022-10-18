@@ -1,4 +1,10 @@
-import { useEffect, useState, useContext, createContext } from 'react';
+import {
+  useEffect,
+  useState,
+  useCallback,
+  useContext,
+  createContext
+} from 'react';
 import axios from 'axios';
 
 const AppContext = createContext();
@@ -10,28 +16,26 @@ const AppProvider = ({ children }) => {
   const [nav, setNav] = useState(false);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const url = `https://api.spoonacular.com/recipes/complexSearch?&query=${search}&apiKey=${process.env.REACT_APP_API_KEY}&addRecipeInformation=true&diet=vegetarian&number=8`;
+  const fetchData = useCallback(async () => {
+    try {
+      const url = `https://api.spoonacular.com/recipes/complexSearch?&query=${search}&apiKey=${process.env.REACT_APP_API_KEY}&addRecipeInformation=true&diet=vegetarian&number=8`;
 
-        const response = await axios(url, {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-        setData(response.data.results);
+      const response = await axios(url, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      setData(response.data.results);
 
-        console.log(response);
-      } catch (error) {
-        setError(error);
-        console.log(error);
-      }
-    };
-
-    fetchData();
+      console.log(response);
+    } catch (error) {
+      setError(error);
+    }
   }, [search]);
-  console.log(data);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData, search]);
 
   return (
     <AppContext.Provider
