@@ -25,17 +25,15 @@ const SingleCard = ({
     };
   };
 
-  const step1 = ricetta.map(item => {
+  const ricette = ricetta.map(item => {
     return item?.step;
   });
 
-  const step2 = ricetta.map(item => {
+  const ingredienti = ricetta.map(item => {
     return item?.ingredients.map(item => {
       return item?.name;
     });
   });
-
-  console.log(step2);
 
   const cardVariants = {
     offscreen: {
@@ -104,10 +102,10 @@ const SingleCard = ({
                   summary: summary,
                   image: image,
                   cucina: cucina,
-                  ricetta: step1,
+                  ricetta: ricette,
                   cottura: cottura,
                   dieta: dieta,
-                  ingredienti: step2
+                  ingredienti: ingredienti
                 }}
               >
                 Learn more

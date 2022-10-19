@@ -26,8 +26,6 @@ const AppProvider = ({ children }) => {
         }
       });
       setData(response.data.results);
-
-      console.log(response);
     } catch (error) {
       setError(error);
     }
