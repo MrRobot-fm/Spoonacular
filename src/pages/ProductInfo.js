@@ -1,14 +1,12 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Wallpaper from '../Components/Wallpaper';
 import { motion } from 'framer-motion';
 
 const ProductInfo = () => {
   const { state } = useLocation();
 
   return (
-    <div className=" w-full min-h-screen relative flex justify-center items-center  md:px-10 2xl:px-72 ">
-      <Wallpaper />
+    <div className=" w-full min-h-screen relative flex justify-center items-center  md:px-10 2xl:px-72 bg-emerald-500">
       <div className="w-full h-full flex flex-col justify-center items-center text-center pt-16 pb-32 text-neutral-100 px-10 sm:px-16">
         <motion.div
           initial={{ y: -300, opacity: 0 }}
