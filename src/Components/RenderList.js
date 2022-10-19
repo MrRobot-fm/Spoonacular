@@ -6,7 +6,6 @@ const RenderList = () => {
   const { data } = useGlobalContext();
   return (
     <div className="w-full pt-16 pb-36">
-      {/* <Navbar query={query} setQuery={setQuery} setSearch={setSearch} /> */}
       <div className="w-full flex flex-wrap justify-center items-center  2xl:px-28">
         {data.map((item, index) => {
           const {
