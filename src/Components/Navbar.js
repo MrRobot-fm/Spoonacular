@@ -59,8 +59,8 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? 'w-full bg-stone-50 z-50 absolute text-gray-700 rounded-b-3xl top-[70px] left-0 flex justify-center text-center md:hidden ease-in duration-500 opacity-100'
-              : 'absolute left-[-100%] top-[70px]  ease-in duration-300 opacity-0'
+              ? 'drop-down w-full bg-stone-50 z-50 absolute text-gray-700 rounded-b-3xl top-[70px] left-0 flex justify-center text-center md:hidden ease-in duration-500 opacity-100'
+              : 'drop-down-close absolute left-[-100%] top-[70px]  ease-in duration-300 opacity-0'
           }
         >
           <ul className="p-4">
