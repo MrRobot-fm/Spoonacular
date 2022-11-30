@@ -7,6 +7,7 @@ const SearchForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+
     setSearch(query);
     e.target.reset();
   };
@@ -24,6 +25,8 @@ const SearchForm = () => {
             placeholder="Search..."
             className="p-3 rounded-2xl text-md outline-none text-slate-500 placeholder-slate-500"
             onChange={handleChange}
+            required
+            minLength={3}
           />
           <SearchOutlined className="mr-2 text-slate-500" />
         </form>

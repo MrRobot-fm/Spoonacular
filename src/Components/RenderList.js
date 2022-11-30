@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useGlobalContext } from '../context';
 import SingleCard from './Card';
+import { clientApi } from '../clientApi';
 
 const RenderList = () => {
-  const { data } = useGlobalContext();
+  const { data, setData, search, setError } = useGlobalContext();
+
+  useEffect(() => {
+    clientApi(search, setData, setError);
+  }, [search, setData, setError]);
+
   return (
     <div className="w-full pt-16 pb-36">
       <div className="w-full flex flex-wrap justify-center items-center  2xl:px-28">
@@ -30,10 +36,10 @@ const RenderList = () => {
               image={image}
               summary={summary}
               id={id}
-              cucina={cuisines}
-              ricetta={steps}
-              cottura={readyInMinutes}
-              dieta={diets}
+              kitchen={cuisines}
+              recipe={steps}
+              baking={readyInMinutes}
+              diet={diets}
             />
           );
         })}

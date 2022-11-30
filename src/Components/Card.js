@@ -14,10 +14,10 @@ const SingleCard = ({
   summary,
   id,
   index,
-  cucina,
-  ricetta,
-  cottura,
-  dieta
+  kitchen,
+  recipe,
+  baking,
+  diet
 }) => {
   const createSummary = () => {
     return {
@@ -25,11 +25,11 @@ const SingleCard = ({
     };
   };
 
-  const ricette = ricetta.map(item => {
+  const recipes = recipe.map(item => {
     return item?.step;
   });
 
-  const ingredienti = ricetta.map(item => {
+  const ingredients = recipe.map(item => {
     return item?.ingredients.map(item => {
       return item?.name;
     });
@@ -101,11 +101,11 @@ const SingleCard = ({
                   title: title,
                   summary: summary,
                   image: image,
-                  cucina: cucina,
-                  ricetta: ricette,
-                  cottura: cottura,
-                  dieta: dieta,
-                  ingredienti: ingredienti
+                  kitchen: kitchen,
+                  recipe: recipes,
+                  baking: baking,
+                  diet: diet,
+                  ingredients: ingredients
                 }}
               >
                 Learn more

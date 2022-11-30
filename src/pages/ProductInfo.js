@@ -41,26 +41,26 @@ const ProductInfo = () => {
           }}
         >
           <div className="pt-6 font-semibold">
-            {state.cucina.length > 0 && (
+            {state.kitchen.length > 0 && (
               <>
                 <h3 className="text-2xl font-semibold text-yellow-300">
                   Cuisine
                 </h3>
-                <p>{state.cucina.join(', ')}</p>
+                <p>{state.kitchen.join(', ')}</p>
               </>
             )}
-            {state.dieta.length > 0 && (
+            {state.diet.length > 0 && (
               <>
                 <h3 className="text-2xl font-semibold text-yellow-300 mt-4 ">
                   Diets
                 </h3>
-                <p>{state.dieta.join(', ')}</p>
+                <p>{state.diet.join(', ')}</p>
               </>
             )}
-            {state.ingredienti && (
+            {state.ingredients && (
               <>
                 <h2 className="text-2xl  mt-4 text-yellow-300">Ingredients</h2>
-                <h3>{state.ingredienti.join('  ')}</h3>
+                <h3>{state.ingredients.join('  ')}</h3>
               </>
             )}
 
@@ -69,9 +69,9 @@ const ProductInfo = () => {
             </h3>
             <h5>
               Ready in:
-              <span className="text-amber-400"> {state.cottura} min</span>
+              <span className="text-amber-400"> {state.baking} min</span>
             </h5>
-            {state.ricetta.map((item, index) => {
+            {state.recipe.map((item, index) => {
               return (
                 <h2 className="p-2" key={index}>
                   <span className="text-yellow-300">{index + 1}.</span> {item}
