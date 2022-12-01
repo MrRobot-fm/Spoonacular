@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import foodVideo from '../assets/video/Verde e Verde Lime Incentrato sul Cibo Cucina Intro di YouTube (1).mp4';
+import './home.css';
+import foodVideo from '../../assets/video/Verde e Verde Lime Incentrato sul Cibo Cucina Intro di YouTube (1).mp4';
 import { motion } from 'framer-motion';
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../../context';
 
 const Home = () => {
   const { setNav, error } = useGlobalContext();
