@@ -1,0 +1,33 @@
+@media only screen and (max-width: 376px) {
+  .drop-down {
+    top: 72px;
+  }
+
+  .drop-down-close {
+    top: 72px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .drop-down {
+    top: 50px;
+  }
+
+  .drop-down-close {
+    top: 50px;
+  }
+}
+
+@media only screen and (max-width: 916px) and (orientation: landscape) {
+  .nav {
+    padding: 2.4rem 0;
+  }
+
+  .drop-down {
+    top: 48px;
+  }
+
+  .drop-down-close {
+    top: 48px;
+  }
+}

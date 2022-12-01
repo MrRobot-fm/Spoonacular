@@ -14,15 +14,10 @@
 
 @media only screen and (max-width: 376px) {
   html {
-    font-size: 85%;
+    font-size: 75%;
   }
-
-  .drop-down {
-    top: 65px;
-  }
-
-  .drop-down-close {
-    top: 65px;
+  .header {
+    height: 80%;
   }
 }
 
@@ -30,12 +25,14 @@
   html {
     font-size: 63%;
   }
+}
 
-  .drop-down {
-    top: 46px;
+@media only screen and (max-width: 916px) and (orientation: landscape) {
+  html {
+    font-size: 63%;
   }
 
-  .drop-down-close {
-    top: 46px;
+  .header {
+    height: 80%;
   }
 }

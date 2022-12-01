@@ -1,7 +1,8 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { IoHomeOutline, IoReorderThreeOutline } from 'react-icons/io5';
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../../context';
+import './navbar.css';
 
 const Navbar = () => {
   const { nav, setNav } = useGlobalContext();
@@ -12,7 +13,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="w-full h-[10vh] flex border-b-2 shadow-md ">
+    <nav className="nav w-full h-[11vh] flex border-b-2 shadow-md ">
       <div className="w-full flex justify-between items-center px-4 ">
         <div className="p-4 ">
           <span className="text-2xl text-emerald-500 font-medium">

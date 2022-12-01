@@ -20,7 +20,7 @@ const Home = () => {
           muted
           className="object-cover h-full w-full absolute -z-10"
         />
-        <div className="w-full h-[90%] flex flex-col justify-center items-center text-white px-4 text-center">
+        <div className="header w-full h-[90%] flex flex-col justify-center items-center text-white px-4 text-center">
           <motion.div
             animate={{
               x: 0,
