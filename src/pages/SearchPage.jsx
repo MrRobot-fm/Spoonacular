@@ -41,13 +41,13 @@ const Test = () => {
         </motion.div>
         <RenderList />
         {error && (
-          <h3 className="text-lg text-red-500 underline bg-white rounded-lg p-2">
-            Failed to get data: {error.message}
+          <h3 className="text-lg text-red-500 bg-white rounded-lg p-2">
+            Failed to get data: {error.message}💥
           </h3>
         )}
         {data.length === 0 && (
-          <h3 className="text-lg text-red-500 underline bg-white rounded-lg p-2">
-            Failed to get data: no results match
+          <h3 className="text-xl text-red-500 bg-white rounded-lg p-2">
+            Failed to get data: no results match💥
           </h3>
         )}
       </div>
